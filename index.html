@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Condiment&family=Limelight&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <div class = "nav-container" >
+        <div class = "wrapper"> 
+            <nav>
+                <div calss = "logo">
+                    Hastag Coffee
+                </div>
+                <ul class = "nav-items">
+                    <li>
+                        <a href="index.html">Home</a> 
+                    </li>
+                    <li>
+                        <a href="AboutUs.html">About</a> 
+                    </li>
+                    <li>
+                        <a href="Menu.html">Menu</a> 
+                    </li>
+                    <li>
+                        <a href="Reser.html">Reservation</a> 
+                    </li>
+                    <li>
+                        <a href="Contact.html">Contact</a> 
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class = "body-container" >
+        <div class="home-image">
+            <img src="./image/HomeImage.png" alt="Coffe Image" >
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+    <div class = "body-container" >
+        <div class = "wrapper">
+            <header>
+                <div class = "body-content">
+                    <h1>THẾ GIỚI CÀ PHÊ</h1>
+                </header>
+        </div>
+
+    <div class="container">
+        <img src="./image/cafehiendai.jpg" alt="" class="item">
+        <img src="./image/VHcafeTG.jpg" alt="" class="item">
+        <img src="./image/caphevot.jpg" alt="" class="item">
+        <img src="./image/caphephin.jpg" alt="" class="item">
+        <img src="./image/quancaphe.jpg" alt="" class="item">
+        <img src="./image/VHcaphe.jpg" alt="" class="item">
+        <a href="" class="prev">&#10094</a>
+        <a href="" class="next">&#10095</a>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carrousel();
+
+        function carrousel(){
+            var x = document.getElementsByClassName("item");
+            for(var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if(myIndex > x.length){
+                myIndex = 1; 
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carrousel,3000);
+        }
+    </script>
+    <footer>
+        <p class="copyright">&copy; Bản quyền thuộc Website Cà Phê</p>
+        <p class="address">80/68 Dương Quảng Hàm, Quận Gò Vấp, HCM</p>
+        <p class="address">Phone: 012 345 6789</p>
+        <p class="address">Email: cvcoffee@gmail.com</p>
+    </footer>
+</body>
+</html>
+
